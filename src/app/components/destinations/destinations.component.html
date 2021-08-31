@@ -1,0 +1,16 @@
+<div class="mx-auto max-w-6xl">
+  <div *ngIf="destinations.length > 0; else emptyResult">
+    <h4 class="text-white text-lg mb-2">Trending</h4>
+    <div class="grid grid-cols-3 gap-y-7">
+      <app-destination-item
+        *ngFor="let destination of destinations | paginate: { itemsPerPage: 6, currentPage: p, totalItems: total }"
+        [destination]="destination"></app-destination-item>
+    </div>
+
+    <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
+  </div>
+
+  <ng-template #emptyResult>
+    <p class="text-white text-xl flex justify-center">Sorry we couldn't find a destination with the searched term, please change the search term and try again.</p>
+  </ng-template>
+</div>

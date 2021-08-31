@@ -1,0 +1,12 @@
+
+.my-pagination ::ng-deep .ngx-pagination {
+  @apply mt-5 mx-auto;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+  @apply bg-luckytrip rounded-lg;
+}
+
+.my-pagination ::ng-deep .ngx-pagination li a {
+  @apply text-white hover:bg-transparent;
+}

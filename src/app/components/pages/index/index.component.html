@@ -1,0 +1,15 @@
+<div class="search-bg">
+  <div class="container mx-auto">
+    <div class="mb-48">
+      <app-header></app-header>
+      <div class="flex flex-col items-center justify-center h-28">
+        <h1 class="text-5xl text-white mb-2">Search LuckyTrip</h1>
+        <h3 class="text-xl text-white mb-5">350 destinations, 1500 blog posts, Unlimited Trips</h3>
+      </div>
+      <app-search (onSearchDestination)="searchDestination($event)"></app-search>
+    </div>
+
+    <app-destinations [destinations]="destinations"></app-destinations>
+    <br><br>
+  </div>
+</div>
